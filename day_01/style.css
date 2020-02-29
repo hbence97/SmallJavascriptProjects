@@ -1,5 +1,6 @@
 html {
   background-image: url("https://i.pinimg.com/originals/51/bc/09/51bc0996c7a74ff83b9b2dfc24a45b7f.jpg");
+  background-size: cover;
 }
 
 body, html {
@@ -15,18 +16,17 @@ body, html {
   align-items: center;
 }
 
-.keys:hover {
-
-}
-
 .key {
   border: 4px solid black;
+  border-radius: .5rem;
   font-size: 40px;
   color: white;
+  transition: all .07s ease;
   font-weight: bold;
   text-align: center;
-  margin-right: 10px;
+  margin-right: 20px;
   background: rgba(0, 0, 0, 0.4);
+  text-shadow: 0 0 5px black;
 }
 
 .key kbd {
@@ -39,4 +39,10 @@ body, html {
   color: #ffcc00;
   font-weight: bold;
   text-transform: uppercase;
+}
+
+.playing {
+  transform: scale(1.1);
+  border-color: #ffc600;
+  box-shadow: 0 0 10px #ffc600;
 }
