@@ -1,13 +1,12 @@
 html {
-  background-image: url("https://data.whicdn.com/images/23644803/original.jpg");
-  background-size: cover;
-  text-align: center;
+  background-image: url("https://cthoward.files.wordpress.com/2010/09/clock_text1.jpg");
+  background-repeat: no-repeat;
+  background-color: black;
 }
 
 body {
   align-items: center;
   display: flex;
-  flex: 1;
   min-height: 100vh;
   align-items: center;
 }
@@ -37,7 +36,7 @@ body {
 .hand {
   width: 50%;
   height: 6px;
-  background: black;
+  background: #AD133A;
   position: absolute;
   top: 50%;
   transform-origin: 100%;
