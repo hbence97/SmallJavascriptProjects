@@ -1,0 +1,46 @@
+html {
+  background-image: url("https://data.whicdn.com/images/23644803/original.jpg");
+  background-size: cover;
+  text-align: center;
+}
+
+body {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  min-height: 100vh;
+  align-items: center;
+}
+
+.clock {
+  width: 300px;
+  height: 300px;
+  border: 10px solid white;
+  border-radius: 50%;
+  margin: 0 auto;
+  position: relative;
+  padding: 2rem;
+  box-shadow:
+        0 0 0 4px rgba(0,0,0,0.1),
+        inset 0 0 0 3px #EFEFEF,
+        inset 0 0 10px black,
+        0 0 10px rgba(0,0,0,0.2);
+}
+
+.clock-face {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-3px;);
+}
+
+.hand {
+  width: 50%;
+  height: 6px;
+  background: black;
+  position: absolute;
+  top: 50%;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition: all 0.05s;
+}
