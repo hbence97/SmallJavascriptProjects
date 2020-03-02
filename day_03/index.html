@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Updating css variables with js">
+    <link rel="stylesheet" href="style.css">
+    <title>Scoped CSS Variables and JS</title>
+  </head>
+  <body>
+    <h2>Update CSS variables with <span class="h2">JS</span></h2>
+
+    <div class="controls">
+      <label for="spacing">Spacing</label>
+      <input type="range" name="spacing" min="10" max="200" value="10" data-sizing="px">
+
+      <label for="blur">Blur</label>
+      <input type="range" name="blur" min="0" max="25" value="0" data-sizing="px">
+
+      <label for="base">Base Color</label>
+      <input type="color" name="base" value="#ffc600">
+    </div>
+    <img src="https://images.hdqwalls.com/wallpapers/colorful-city-view-skycrapper-sunset-mj.jpg" alt="city view" height="480">
+  <script src="app.js"></script>
+  </body>
+</html>
