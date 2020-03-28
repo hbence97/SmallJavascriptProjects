@@ -18,3 +18,8 @@ Link: https://hbence97.github.io/30DayVanillaJSCodingChallenge/day_03/
 Day 4 - Array methods exercise: ✔ (filter(), map(), sort(), reduce())
 
 Link: https://hbence97.github.io/30DayVanillaJSCodingChallenge/day_04/
+
+---
+Day 5 - Flex panels image gallery: ✔ (New things learned: Flexbox)
+
+Link: https://hbence97.github.io/30DayVanillaJSCodingChallenge/day_05/
