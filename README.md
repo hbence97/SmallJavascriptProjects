@@ -1,15 +1,15 @@
- JavaScript projects that can be done in an hour or less.
--
-01 - Drum Kit: https://hbence97.github.io/SmallJavascriptProjects/DrumKit/
+# JavaScript projects that can be done in an hour or less.
 
----
-02 - JavaScript Clock: https://hbence97.github.io/SmallJavascriptProjects/JavaScriptClock/
+1. [Drum Kit](https://hbence97.github.io/SmallJavascriptProjects/DrumKit/)
 
----
-03 - Updating CSS variables with JavaScript: https://hbence97.github.io/SmallJavascriptProjects/ScopedCSSVariables&JS/
+2. [JavaScript Clock](https://hbence97.github.io/SmallJavascriptProjects/JavaScriptClock/)
 
----
-04 - Array methods exercise: https://hbence97.github.io/SmallJavascriptProjects/ArrayMethodsExercise/
+3. [Updating CSS variables with JavaScript](https://hbence97.github.io/SmallJavascriptProjects/ScopedCSSVariables&JS/)
 
----
-05 - Flex panels image gallery: https://hbence97.github.io/SmallJavascriptProjects/ImageGallery/
+4. [Array methods exercise](https://hbence97.github.io/SmallJavascriptProjects/ArrayMethodsExercise/)
+
+5. [Flex panels image gallery](https://hbence97.github.io/SmallJavascriptProjects/ImageGallery/)
+
+6. [Todo list](https://hbence97.github.io/SmallJavascriptProjects/TodoList/)
+
+(*I used several resources making these projects.*)
