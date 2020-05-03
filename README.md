@@ -12,4 +12,6 @@
 
 6. [Todo list](https://hbence97.github.io/SmallJavascriptProjects/TodoList/)
 
+7. [Weather forecast](https://hbence97.github.io/SmallJavascriptProjects/WeatherForecast/)
+
 (*I used several resources making these projects.*)
