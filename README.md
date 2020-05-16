@@ -14,4 +14,6 @@
 
 7. [Weather forecast](https://hbence97.github.io/SmallJavascriptProjects/WeatherForecast/)
 
+8. [Frontend practice w/ '404 page'](https://hbence97.github.io/SmallJavascriptProjects/FrontendPracticeWithSidebar&DropdownMenu/)
+
 (*I used several resources making these projects.*)
