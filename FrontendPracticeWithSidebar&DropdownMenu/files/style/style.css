@@ -1,0 +1,624 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(248, 248, 248);
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+
+header nav {
+    width: 100%;
+    top: 0px;
+    height: 211px;
+    background: rgb(54, 192, 246);
+    position: fixed;
+    transition: 0.7s ease;
+    z-index: 100;
+}
+
+.nav-image {
+    height: 209px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.89);
+    border: 2px solid white;
+    transition: 0.7s ease;
+    position: fixed;
+}
+
+.nav-image-2 {
+    position: absolute;
+    height: 181px;
+    left: 48%;
+    background-color: white;
+    border-radius: 50%;
+    padding: 15px;
+    animation: bounceIn 0.8s;
+    transform: rotate(0deg) scale(1) translateZ(0);
+    transition: all 0.7s cubic-bezier(.8,1.8,.75,.75);
+}
+
+
+.nav-image-2:hover {
+    transform: rotate(10deg) scale(1.1);
+    transition: 0.4s cubic-bezier(.8,1.8,.75,.75);
+}
+
+header .scrolled {
+    height: 82px;
+}
+
+.scrolled .nav-image {
+    height: 80px;
+}
+
+.scrolled .nav-image-2 {
+    height: 51px;
+    left: 52%;
+}
+
+.scrolled .top-nav-button {
+    top: 10px;
+}
+
+.scrolled .nav-links {
+    top: 50px;
+}
+
+.scrolled .username {
+    top: 19px;
+}
+
+.sidebar-scrolled  {
+    top: -127px;
+}
+
+.username {
+    position: absolute;
+    left: 91%;
+    top: 80px;
+    font-size: 32px;
+    color: white;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.89);
+    transition: 0.7s ease;
+}
+
+.top-nav-button {
+   position: relative; 
+   width: 60px;
+   height: 60px;
+   left: 86%;
+   top: 70px;
+   background: none;
+   border: none;
+   background-color: rgba(0, 0, 0, 0.89);
+   border-radius: 50%;
+   cursor: pointer;
+   transition: 0.7s ease;
+   animation: pulse 7s infinite;
+}
+
+.nav-links {
+    position: absolute;
+    background: white;
+    list-style: none;
+    width: 200px;
+    height: 180px;
+    padding: 20px 0;
+    font-size: 22px;
+    left: 82%;
+    top: 110px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5%;
+    transform: translate(-10px);
+    transition: all 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.nav-links a:hover {
+    color: rgb(54, 192, 246);
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: black
+}
+
+.top-nav .top-nav-button:focus + ul {
+    opacity: 1;
+    pointer-events: all;
+}
+
+i {
+    color: white;
+}
+
+.sidebar {
+    position: fixed;
+    margin-top: 210px;
+    background: rgb(54, 192, 246);
+    width: 250px;
+    overflow-y: auto;
+    max-height: calc(100vh - 13rem);
+    z-index: 101;
+    /* Transition effect is working when you research and only once for some reason, but with every other element, it works fine */
+}
+
+.sidebar::-webkit-scrollbar {
+    display: none; /*Hiding the scrollbar doesn't work in Firefox since they dropped the support for hidden scrollbars without functionality*/
+}
+
+.sidebar-text {
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 65px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.89);
+    color: white;
+    border: 2px solid white;
+    letter-spacing: 1px;
+}
+
+.sidebar ul {
+    padding-left: 0;
+    margin-top: 0;
+    list-style: none;
+    margin-bottom: 0;
+}
+
+.sidebar li {
+    line-height: 60px;
+    border: 2px solid white;
+}
+
+.sidebar li a{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    padding-left: 5px;
+    display: block;
+    position: relative;
+}
+
+.sidebar ul li a:hover {
+    color: rgba(0, 0, 0, 0.89);
+    background-color: white;
+    border-left: 5px solid rgb(42, 195, 255);
+}
+
+.sidebar ul ul {
+    position: static;
+    display: none;
+}
+
+.sidebar ul .dimens-mngmnt-show.show {
+    display: block;
+}
+
+.sidebar ul .engine-spec-show.show {
+    display: block;
+}
+
+.sidebar ul .alloc-engine-show.show {
+    display: block;
+}
+
+.sidebar ul .user-mngmnt-show.show {
+    display: block;
+}
+
+.sidebar ul .prmtr-tables-show.show {
+    display: block;
+}
+
+.sidebar ul .hierarchies-filters-show.show {
+    display: block;
+}
+
+.sidebar ul .rate-mngmnt-show.show {
+    display: block;
+}
+
+.sidebar ul .ftp-patterns-show.show {
+    display: block;
+}
+
+.sidebar ul ul li{
+    line-height: 42px;
+    border-bottom: none;
+}
+
+.sidebar ul ul li a {
+    font-size: 15px;
+    color: white;
+    padding-left: 40px;
+    padding-right: 30px;
+}
+
+.sidebar ul li a span {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 22px;
+    transition: 0.4s ease;
+}
+
+.sidebar ul ul ul li a {
+    font-size: 15px;
+    color: white;
+    padding-left: 80px;
+    padding-right: 30px;
+}
+
+.sidebar ul .user-mngmnt-show li {
+    color: white;
+    padding-left: 5px;
+}
+
+.sidebar ul .user-mngmnt-show li:hover {
+    border-left: 5px solid rgba(0, 0, 0, 0.89);
+    color: rgba(0, 0, 0, 0.89);
+    background-color: white;
+}
+
+.sidebar ul li a span.rotate {
+    transform: translateY(-50%) rotate(-180deg);
+}
+
+.main-content {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+}
+
+.main-content .main-content-heading h1 {
+    position: relative;
+    left: 5px;
+    color: rgb(54, 192, 246);
+    text-shadow: 1px 1px 1px black;
+    font-size: 34px;
+}
+
+.projects {
+    position: relative;
+    margin-top: 80px;
+    right: 42%;
+    text-align: center;
+    display: flex;
+}
+
+.project {
+    padding: 0 30px;
+    min-width: 200px;
+    letter-spacing: 0.01em;
+    font-style: italic;
+    font-weight: 300;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.89);
+}
+
+.icon-container {
+    width: 8rem;
+    height: 8rem;
+    border: 3px solid black;
+    background-color: rgb(54, 192, 246);
+    display: flex;
+    position: relative;
+    left: 30px;
+    transform: rotate(45deg);
+    margin-bottom: 40px;
+}
+
+.icon-container i {
+    margin: auto;
+    transform: rotate(-45deg);
+}
+
+.big-eclipse {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+.mid-eclipse {
+    position: absolute;
+    top: 50%;
+    right: 35%;
+    height: 60%;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+.small-eclipse {
+    position: absolute;
+    bottom: -10%;
+    left: 20%;
+    z-index: -1;
+}
+
+.not-found {
+    position: relative;
+    top: 150px;
+}
+
+.home-page {
+    position: absolute;
+    top: 250px;
+    left: 51%;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    background-color: rgb(54, 192, 246);
+    border: 2px solid rgb(245, 245, 245);
+    border-radius: 50%;
+    animation: homeButtonPulse infinite 3s ease;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.home-page a {
+    display: inline-block;
+    position: relative;
+    width: 85px;
+    height: 85px;
+    margin: auto;
+}
+
+.home-page a i {
+    position: absolute;
+    top: 8px;
+    left: 12px;
+}
+
+.circles:after {
+    display: inline-block;
+    width: 100%;
+    height: 100px;
+    position:absolute;
+    top: -50px;
+    left:0;
+    transform:skewY(-4deg);
+    -webkit-transform:skewY(-4deg);
+}
+
+.circles { 
+    text-align: center;
+    position: relative;
+    margin-top:-60px;
+    height: 650px;
+    box-shadow:inset -1px -4px 4px rgba(0,0,0,0.2);
+}
+
+.circles p {
+    font-size: 170px;
+    color: rgb(245, 243, 243);
+    padding-top: 100px;
+    position: relative;
+    z-index: 9;
+    left: 4%;
+    line-height: 100%;
+}
+
+.circles p small { 
+    font-size: 40px; 
+    line-height: 100%; 
+    vertical-align: top;   
+}
+
+.circles .circle.small {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: rgb(54, 192, 246);
+    position: absolute;
+    z-index: 1;
+    top: 80px;
+    left: 50%;
+    animation: 7s smallmove infinite cubic-bezier(1,.22,.71,.98);	
+    -webkit-animation: 7s smallmove infinite cubic-bezier(1,.22,.71,.98);
+    animation-delay: 1.2s;
+    -webkit-animation-delay: 1.2s;
+}
+
+.circles .circle.med {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: rgb(54, 192, 246);
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 10%;
+    animation: 7s medmove infinite cubic-bezier(.32,.04,.15,.75);	
+    -webkit-animation: 7s medmove infinite cubic-bezier(.32,.04,.15,.75);
+    animation-delay: 0.4s;
+    -webkit-animation-delay: 0.4s;
+}
+
+.circles .circle.big {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: rgb(54, 192, 246);
+    position: absolute;
+    z-index: 1;
+    top: 200px;
+    right: 0;
+    animation: 8s bigmove infinite;	
+    -webkit-animation: 8s bigmove infinite;
+    animation-delay: 3s;
+    -webkit-animation-delay: 1s;
+}
+
+@-webkit-keyframes smallmove {
+    0% { top: 10px; left: 45%; opacity: 1; }
+    25% { top: 300px; left: 40%; opacity:0.7; }
+    50% { top: 240px; left: 55%; opacity:0.4; }
+    75% { top: 100px; left: 40%;  opacity:0.6; }
+    100% { top: 10px; left: 45%; opacity: 1; }
+}
+
+@keyframes smallmove {
+    0% { top: 10px; left: 45%; opacity: 1; }
+    25% { top: 300px; left: 40%; opacity:0.7; }
+    50% { top: 240px; left: 55%; opacity:0.4; }
+    75% { top: 100px; left: 40%;  opacity:0.6; }
+    100% { top: 10px; left: 45%; opacity: 1; }
+}
+
+@-webkit-keyframes medmove {
+    0% { top: 0px; left: 20%; opacity: 1; }
+    25% { top: 300px; left: 80%; opacity:0.7; }
+    50% { top: 240px; left: 55%; opacity:0.4; }
+    75% { top: 100px; left: 40%;  opacity:0.6; }
+    100% { top: 0px; left: 20%; opacity: 1; }
+}
+
+@keyframes medmove {
+    0% { top: 0px; left: 20%; opacity: 1; }
+    25% { top: 300px; left: 80%; opacity:0.7; }
+    50% { top: 240px; left: 55%; opacity:0.4; }
+    75% { top: 100px; left: 40%;  opacity:0.6; }
+    100% { top: 0px; left: 20%; opacity: 1; }
+}
+
+@-webkit-keyframes bigmove {
+    0% { top: 0px; right: 4%; opacity: 0.5; }
+    25% { top: 100px; right: 40%; opacity:0.4; }
+    50% { top: 240px; right: 45%; opacity:0.8; }
+    75% { top: 100px; right: 35%;  opacity:0.6; }
+    100% { top: 0px; right: 4%; opacity: 0.5; }
+}
+@keyframes bigmove {
+    0% { top: 0px; right: 4%; opacity: 0.5; }
+    25% { top: 100px; right: 40%; opacity:0.4; }
+    50% { top: 150px; right: 45%; opacity:0.8; }
+    75% { top: 100px; right: 35%;  opacity:0.6; }
+    100% { top: 0px; right: 4%; opacity: 0.5; }
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.99); }
+    20% { box-shadow: 0 0 0 2rem rgba(50, 7, 100, 0); }
+    40% { box-shadow: 0 0 0 0 rgba(175, 144, 204, 0); }
+    100% { box-shadow: 0 0 0 0 0; }
+}
+
+@keyframes homeButtonPulse {
+    0% { transform: scale(1, 1); }
+    25% { transform: scale(1, 1); }
+    50% { transform: scale(1.2, 1.2); }
+    100% { transform: scale(1, 1); }
+}
+
+@keyframes bounceIn {
+    0% { opacity: 1; transform: scale(.3); }
+    50% { opacity: 1; transform: scale(1.05); }
+    70% { opacity: 1; transform: scale(.9); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+@media screen and (max-width: 1330px) {
+    .projects {
+        flex-direction: column;
+        left: -37%;
+    }
+
+    .project {
+        min-width: 500px;
+    }
+
+    .icon-container {
+        left: 37%;
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width: 1230px) {
+    .top-nav-button {
+        left: 80%;
+    }
+
+    .username {
+        left: 87%;
+    }
+
+    .nav-links {
+        left: 75%;
+    }
+
+    .circles p {
+        left: 7%;
+    }
+
+    .home-page {
+        left: 53%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .top-nav-button {
+        left: 75%;
+    }
+
+    .username {
+        left: 83%;
+    }
+
+    .circles p {
+        left: 10%;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .project {
+        min-width: 10px;
+        max-width: 150px;
+    }
+
+    .project h3 {
+        position: relative;
+        left: 45px;
+    }
+
+    .project p {
+        position: relative;
+        left: 45px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .nav-image-2 {
+        display: none;
+    }
+
+    .top-nav-button {
+        left: 55%;
+    }
+
+    .username {
+        left: 70%;
+    }
+
+    .nav-links {
+        left: 47%;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .home-page {
+        left: 50%;
+    }
+}
+
+/* Everything is fine untill 552 pixels */
