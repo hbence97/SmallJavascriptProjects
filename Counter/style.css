@@ -107,3 +107,7 @@ ul li:hover span:nth-child(1){
     transform: translate(0px, 0px);
     opacity: .2;
 }
+
+ul li:hover span{
+    background: #f08da1ef !important;
+}
