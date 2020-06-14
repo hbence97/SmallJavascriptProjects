@@ -16,4 +16,6 @@
 
 8. [Frontend practice w/ '404 page'](https://hbence97.github.io/SmallJavascriptProjects/FrontendPracticeWithSidebar&DropdownMenu/)
 
+9. [Counter](https://hbence97.github.io/SmallJavascriptProjects/Counter/)
+
 (*I used several resources making these projects.*)
