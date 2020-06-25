@@ -18,4 +18,6 @@
 
 9. [Counter](https://hbence97.github.io/SmallJavascriptProjects/Counter/)
 
+10. [Frontend practice 2](https://hbence97.github.io/SmallJavascriptProjects/FrontendPractice2/)
+
 (*I used several resources making these projects.*)
