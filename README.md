@@ -20,4 +20,6 @@
 
 10. [Frontend practice 2](https://hbence97.github.io/SmallJavascriptProjects/FrontendPractice2/)
 
+11. [Real-time Chatroom](https://hbence97.github.io/SmallJavascriptProjects/Chatroom/)
+
 (*I used several resources making these projects.*)
