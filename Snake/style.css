@@ -1,4 +1,29 @@
+body {
+    background-color: #7ebc59;
+}
+
 canvas {
     margin: 2rem auto;
     display: flex;
+}
+
+button {
+    position: relative;
+    bottom: 350px;
+    left: 270px;
+    height: 70px;
+    width: 220px;
+    font-size: 30px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background: rgb(12, 90, 12);
+    color: #fff;
+    box-shadow:1px 3px 4px 2px  black;
+}
+
+button:hover {
+    background: rgb(250, 249, 249);
+    color: #4f882e;
+    transition: ease 0.3s;
 }

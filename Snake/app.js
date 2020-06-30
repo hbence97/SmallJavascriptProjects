@@ -9,6 +9,7 @@ apple.src = "images/apple.png";
 const eat = new Audio("audio/eat.mp3");
 const dead = new Audio("audio/dead.mp3");
 
+let highScore = localStorage.getItem('highscore');
 const box = 32;
 let score = 0;
 let snake = [];
@@ -96,6 +97,17 @@ function draw() {
     context.fillStyle = 'white';
     context.font = '45px sans-serif';
     context.fillText(score, 2 * box, 1.6 * box);
+
+    context.fillText('Best score:', 8.6* box, 1.55* box);
+    context.fillText(highScore, 16 * box, 1.6 * box);
+
+    if (highScore !== null) {
+        if (score > highScore) {
+            localStorage.setItem('highscore', score);
+        }
+    } else {
+        localStorage.setItem('highscore', score);
+    }
 }
 
-let game = setInterval(draw, 103);
+let game = setInterval(draw, 105);
