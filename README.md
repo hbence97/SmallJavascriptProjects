@@ -22,4 +22,6 @@
 
 11. [Real-time Chatroom](https://hbence97.github.io/SmallJavascriptProjects/Chatroom/)
 
+12. [Snake](https://hbence97.github.io/SmallJavascriptProjects/Snake/)
+
 (*I used several resources making these projects.*)
