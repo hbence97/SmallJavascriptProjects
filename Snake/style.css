@@ -1,5 +1,6 @@
 body {
     background-color: #7ebc59;
+    overflow: hidden;
 }
 
 canvas {
@@ -10,7 +11,7 @@ canvas {
 button {
     position: relative;
     bottom: 350px;
-    left: 270px;
+    left: 130px;
     height: 70px;
     width: 220px;
     font-size: 30px;
