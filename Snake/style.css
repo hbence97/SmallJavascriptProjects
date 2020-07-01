@@ -28,3 +28,21 @@ button:hover {
     color: #4f882e;
     transition: ease 0.3s;
 }
+
+.click-here {
+    position: relative;
+    bottom: 420px;
+    font-size: 28px;
+    right: 110px;
+    color: black;
+    text-shadow: 1px 1px #4f882e;
+}
+
+.enter {
+    position: relative;
+    bottom: 160px;
+    font-size: 28px;
+    right: 370px;
+    color: black;
+    text-shadow: 1px 1px #4f882e;
+}

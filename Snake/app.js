@@ -21,6 +21,12 @@ let food = {
 }
 
 this.addEventListener('keydown', e => {
+    if (e.keyCode === 13) {
+        window.location.reload();
+    }
+});
+
+this.addEventListener('keydown', e => {
     if (e.keyCode === 37 && direction !== 'RIGHT') {
         direction = 'LEFT';
     } else if (e.keyCode === 38 && direction !== 'DOWN') {
