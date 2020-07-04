@@ -10,6 +10,7 @@ class Bird {
         this.y = 150;
         this.w = 34;
         this.h = 26;
+        this.radius = 12;
         this.frame = 0;
         this.gravity = 0.25;
         this.flapping = 4.6;
@@ -28,7 +29,7 @@ class Bird {
     }
     flap() {
         this.speed = -this.flapping;
-    };
+    }
     update(){
         this.period = gameState.current === gameState.getReady ? 10 : 5;
         this.frame += frames % this.period === 0 ? 1 : 0;
@@ -44,6 +45,7 @@ class Bird {
             if (this.y + this.h / 2 >= canvas.height - foreground.h) {
                 this.y = canvas.height - foreground.h - this.h / 2;
                 if (gameState.current === gameState.game) {
+                    sfxDie.play();
                     gameState.current = gameState.gameOver;
                 }
             }
@@ -55,5 +57,8 @@ class Bird {
                 this.rotation = -25 * DEGREE;
             }
         }
-    };
+    }
+    speedReset() {
+        this.speed = 0;
+    }
 }

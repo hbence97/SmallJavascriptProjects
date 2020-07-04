@@ -12,10 +12,10 @@ class Foreground {
     draw() {
         context.drawImage(sprite, this.sX, this.sY, this.w, this.h, this.x, this. y, this.w, this.h);
         context.drawImage(sprite, this.sX, this.sY, this.w, this.h, this.x + this.w, this. y, this.w, this.h);
-    };
+    }
     update() {
         if (gameState.current === gameState.game) {
             this.x = (this.x - this.dX) % (this.w / 2);
         }
-    };
+    }
 }

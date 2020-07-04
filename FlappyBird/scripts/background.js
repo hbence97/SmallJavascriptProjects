@@ -11,5 +11,5 @@ class Background {
     draw() {
         context.drawImage(sprite, this.sX, this.sY, this.w, this.h, this.x, this. y, this.w, this.h);
         context.drawImage(sprite, this.sX, this.sY, this.w, this.h, this.w, this. y, this.w, this.h);
-    };
+    }
 }

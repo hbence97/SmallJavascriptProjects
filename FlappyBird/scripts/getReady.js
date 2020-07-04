@@ -12,5 +12,5 @@ class GetReady {
         if (gameState.current === gameState.getReady) {
             context.drawImage(sprite, this.sX, this.sY, this.w, this.h, this.x, this. y, this.w, this.h);
         }
-    };
+    }
 }
