@@ -2,6 +2,7 @@ const canvas = document.querySelector('.canvas');
 const context = canvas.getContext('2d');
 
 let frames = 0;
+const DEGREE = Math.PI/180;
 
 const sprite = new Image();
 sprite.src = 'images/sprite.png';
@@ -12,12 +13,6 @@ const gameState = {
     game: 1,
     gameOver: 2
 }
-
-const bird = new Bird();
-const foreground = new Foreground();
-const background = new Background();
-const getReady = new GetReady();
-const gameOver = new GameOver();
 
 canvas.addEventListener('click', () => {
     switch(gameState.current) {
@@ -33,6 +28,13 @@ canvas.addEventListener('click', () => {
     }
 });
 
+const bird = new Bird();
+const foreground = new Foreground();
+const background = new Background();
+const getReady = new GetReady();
+const gameOver = new GameOver();
+const pipes = new Pipes();
+
 function draw() {
     context.fillStyle = '#70c5ce';
     context.fillRect(0, 0, canvas.width, canvas.height);
@@ -40,18 +42,21 @@ function draw() {
     background.draw();
     foreground.draw();
     bird.draw();
-    bird.update();
+    pipes.draw();
     getReady.draw();
     gameOver.draw();
 };
 
 function update() {
     bird.update();
+    foreground.update();
+    pipes.update();
 };
 
 function gameLoop() {
-    frames++;
+    update();
     draw();
+    frames++;
 
     requestAnimationFrame(gameLoop);
 };

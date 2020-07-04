@@ -14,11 +14,17 @@ class Bird {
         this.gravity = 0.25;
         this.flapping = 4.6;
         this.speed = 0;
+        this.rotation = 0;
     };
 
     draw() {
         let bird = this.animation[this.frame];
-        context.drawImage(sprite, bird.sX, bird.sY, this.w, this.h, this.x - this.w / 2, this.y - this.h / 2, this.w, this.h);
+        context.save();
+        context.translate(this.x, this.y);
+        context.rotate(this.rotation);
+        context.drawImage(sprite, bird.sX, bird.sY, this.w, this.h, - this.w / 2, - this.h / 2, this.w, this.h);
+
+        context.restore();
     }
     flap() {
         this.speed = -this.flapping;
@@ -30,14 +36,23 @@ class Bird {
 
         if (gameState.current === gameState.getReady) {
             this.y = 150;
+            this.rotation = 0 * DEGREE;
         } else {
             this.speed += this.gravity;
             this.y += this.speed;
-            if(this.y + this.h / 2 >= canvas.height - foreground.h) {
+
+            if (this.y + this.h / 2 >= canvas.height - foreground.h) {
                 this.y = canvas.height - foreground.h - this.h / 2;
                 if (gameState.current === gameState.game) {
                     gameState.current = gameState.gameOver;
                 }
+            }
+
+            if (this.speed >= this.flapping) {
+                this.rotation = 50 * DEGREE;
+                this.frame = 1;
+            } else {
+                this.rotation = -25 * DEGREE;
             }
         }
     };
