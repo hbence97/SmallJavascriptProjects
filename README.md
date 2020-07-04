@@ -24,4 +24,6 @@
 
 12. [Snake](https://hbence97.github.io/SmallJavascriptProjects/Snake/)
 
+13. [Flappy Bird](https://hbence97.github.io/SmallJavascriptProjects/FlappyBird/)
+
 (*I used several resources making these projects.*)
