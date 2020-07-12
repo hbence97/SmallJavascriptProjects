@@ -26,4 +26,6 @@
 
 13. [Flappy Bird](https://hbence97.github.io/SmallJavascriptProjects/FlappyBird/)
 
+14. [Rock Paper Scissors](https://hbence97.github.io/SmallJavascriptProjects/RockPaperScissors/)
+
 (*I used several resources making these projects.*)
