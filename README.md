@@ -28,4 +28,6 @@
 
 14. [Rock Paper Scissors](https://hbence97.github.io/SmallJavascriptProjects/RockPaperScissors/)
 
+15. [Tip calculator](https://hbence97.github.io/SmallJavascriptProjects/TipCalculator/)
+
 (*I used several resources making these projects.*)
