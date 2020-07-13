@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Tip calculator</title>
+</head>
+<body>
+  <div class="smartphone">
+    <div class="content">
+      <h1>Tip calculator</h1>
+      <div class="calculator">
+
+        <form>
+          <p>How much was your receipt?</p>
+          $ <input class="receipt-amount" id="receipt-amount" type="text" placeholder="Receipt Amount" autocomplete="off">
+
+          <p>How was your service?</p>
+          <select class="service-quality" id="service-quality">
+            <option disabled selected value="0">Choose an option</option>
+            <option value="0.3">30&#37; &#45; Fantastic</option>
+            <option value="0.2">20&#37; &#45; Good</option>
+            <option value="0.15">15&#37; &#45; Ok</option>
+            <option value="0.1">10&#37; &#45; Bad</option>
+            <option value="0.05">5&#37; &#45; Terrible</option>
+          </select>
+
+          <p>How many people are sharing the receipt?</p>
+          <input class="number-of-people" id="number-of-people" type="text" placeholder="Number of people" autocomplete="off">
+          <button class="button" type="button">Calculate</button>
+        </form>
+
+      </div>
+
+      <div class="total-tip">
+        <sup>$</sup><span class="tip">0.00</span>
+        <small class="each">each</small>
+      </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

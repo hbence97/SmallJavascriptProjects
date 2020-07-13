@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css?family=Asap:400,500,700&display=swap');
+
+body {
+  font-family: Asap, sans-serif;
+  background-image: url("https://moneydotcomvip.files.wordpress.com/2016/02/160218_em_cashtip.jpg?quality=85");
+  background-size: cover;
+  font-size: 21px;
+}
+
+.smartphone {
+    position: absolute;
+    border-top: solid 40px black;
+    border-left: solid 20px black;
+    border-bottom: solid 70px black;
+    border-right: solid 20px black;
+    border-radius: 36px;
+    transform: translate(-50%, 0);
+    left: 50%;
+}
+
+.smartphone::before {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 5px;
+    left: 50%;
+    top: -22px;
+    transform: translate(-50%, -50%);
+    background: #333;
+    border-radius: 10px;
+}
+
+.smartphone::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 50%;
+    bottom: -85px;
+    background: #333;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.smartphone .content {
+    width: 230px;
+    height: 590px;
+    background: white;
+    padding-top: 5px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 3px;
+    margin-bottom: 1px;
+}
+
+p {
+    font-weight: bold;
+    text-align: center;
+    margin: 16px 0;
+}
+
+.receipt-amount {
+    font-size: 16px;
+    height: 25px;
+    padding-left: 3px;
+    border: 1px solid grey;
+}
+
+.receipt-amount:focus {
+    border: 3px solid #2980b9;
+}
+
+.service-quality {
+    font-size: 20px;
+    height: 35px;
+    width: 200px;
+    margin-left: 16px;
+    padding-left: 2px;
+    border: 1px grey solid;
+}
+
+.service-quality:focus {
+    border: 3px solid #2980b9;
+}
+
+.number-of-people {
+    font-size: 16px;
+    height: 25px;
+    margin-left: 16px;
+    padding-left: 3px;
+    border: 1px grey solid;
+}
+
+.number-of-people:focus {
+    border: 3px solid #2980b9;
+}
+
+.button {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+    display: block;
+    background: #4c2827;
+    margin: 0 auto;
+    margin-top: 12px;
+    border-radius: 5px;
+    width: 140px;
+    height: 45px;
+    color: white;
+}
+  
+.button:hover {
+    background: #AD133A;
+    transition: 0.3s ease;
+}
+
+.total-tip {
+    font-size: 30px;
+    text-align: center;
+}
+
+.total-tip::before {
+    content: "Tip amount";
+    font-size: 25px;
+    font-weight: bold;
+    display: block;
+}
+
+.total-tip sup {
+    font-size: 20px;
+}
+
+.total-tip small {
+    font-size: 20px;
+    font-weight: bold;
+}
