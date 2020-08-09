@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Can you call?</title>
+</head>
+<body>
+    <div class="content">
+        <h1>Is it a profitable call?</h1>
+        <form>
+            <label for="outs">How many outs do you have?</label>
+            <input class="outs" id="outs" type="text" placeholder="Outs" autocomplete="off">
+
+            <label for="pot-odds">What are your pot odds in ratio?</label>
+            <br>
+            <input class="pot-odds reward" id="pot-odds" type="text" autocomplete="off">
+            <span>:</span>
+            <input class="pot-odds risk" id="pot-odds" type="text" autocomplete="off">
+            <br>
+
+            <label for="checkbox">Will there be a showdown after the flop?</label>
+            <input class="checkbox" id="checkbox" type="checkbox">
+
+            <button class="button">Calculate</button>
+        </form>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
