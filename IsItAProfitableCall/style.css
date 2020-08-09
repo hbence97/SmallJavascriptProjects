@@ -10,9 +10,33 @@ body {
     text-align: center;
 }
 
+/* Input field without arrows */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+}
+
 .content {
     max-width: 400px;
-    margin: 2% auto;
+    margin: 2% 20rem;
+}
+
+.result {
+    font-size: 1.8em;
+    margin-top: 10%;
 }
 
 h1 {
@@ -81,4 +105,18 @@ button:hover {
     background: #1640cc;
     transition: all 0.5s;
     transform: scale(1.05);
+}
+
+.result span {
+    margin: 6rem auto;
+}
+
+.equity-result,
+.pot-odds-result {
+    color: #1640cc;
+}
+
+.ev-result {
+    margin-top: 3rem;
+    font-size: 1.5em;
 }
