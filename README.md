@@ -30,4 +30,6 @@
 
 15. [Tip calculator](https://hbence97.github.io/SmallJavascriptProjects/TipCalculator/)
 
+16. [Is it a profitable call](https://hbence97.github.io/SmallJavascriptProjects/IsItAProfitableCall/)
+
 (*I used several resources making these projects.*)
