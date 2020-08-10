@@ -32,4 +32,6 @@
 
 16. [Is it a profitable call](https://hbence97.github.io/SmallJavascriptProjects/IsItAProfitableCall/)
 
+17. [EV Calculator](https://hbence97.github.io/SmallJavascriptProjects/EVCalculator/)
+
 (*I used several resources making these projects.*)
