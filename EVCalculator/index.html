@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>EV Calculator</title>
+</head>
+<body>
+    <header>
+        <img src="images/poker_logo.png" alt="Poker Logo">
+        <h1>EV Calculator</h1>
+    </header>
+
+    <div class="info-container">
+        <div class="info-container-2">
+            <span>%W: How often you expect to win the pot.</span>
+            <br>
+            <span>$W: How much you expect to win. (Total size when villain calls)</span>
+            <br>
+            <span>%L: How often you expect to lose the pot.</span>
+            <br>
+            <span>$L: How much you expect to lose. (My All-In amount w/o the pot)</span>
+        </div>
+    </div>
+
+    <div class="content">
+        <form class="formula">
+            <span> ( </span>
+            <span> % </span>
+            <input class="percent-w" type="number" autocomplete="off" placeholder="W">
+            <span> * </span>
+            <span> $ </span>
+            <input class="money-w" type="number" autocomplete="off" placeholder="W">
+            <span> ) </span>
+            <span> - </span>
+            <span> ( </span>
+            <span> % </span>
+            <input class="percent-l" type="number" autocomplete="off" placeholder="L">
+            <span> * </span>
+            <span> $ </span>
+            <input class="money-l" type="number" autocomplete="off" placeholder="L">
+            <span> ) </span>
+        </form>
+
+        <div class="ev-result">
+            <span class="result"></span>
+            <div class="plus-ev">
+                <p style="color: #4dcc7d;">+EV Call</p>
+            </div>
+
+            <div class="minus-ev">
+                <p style="color: #fc121b;">-EV Call</p>
+            </div>
+        </div>
+
+        <button class="button">Calculate</button>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
