@@ -34,4 +34,6 @@
 
 17. [EV Calculator](https://hbence97.github.io/SmallJavascriptProjects/EVCalculator/)
 
+18. [Coin Toss](https://hbence97.github.io/SmallJavascriptProjects/CoinTossGame/)
+
 (*I used several resources making these projects.*)
