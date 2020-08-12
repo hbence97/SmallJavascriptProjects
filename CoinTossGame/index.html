@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Coin Toss Game</title>
+</head>
+<body>
+    <header>
+        <h1>First to 7 points win</h1>
+    </header>
+
+    <div class="selection-info">
+        <span class="info-span">Player selected: <span class="player-selected"></span></span>
+        <span class="info-span">Computer selected: <span class="computer-selected"></span></span>
+    </div>
+
+    <div class="score">
+        <div class="score-container">
+            <span class="score-beggining">Player: <span class="user-score">0</span></span>
+            <span class="score-beggining">Computer: <span class="comp-score">0</span></span>
+        </div>
+    </div>
+
+    <div class="selections">
+        <h2>Make a selection!</h2>
+        <div class="buttons">
+            <button class="heads">Heads</button>
+            <button class="tails">Tails</button>
+        </div>
+    </div>
+
+    <img class="image-heads" src="images/heads.png" alt="Heads">
+    <img class="image-tails" src="images/tails.png" alt="Tails">
+    
+    <div class="result">
+        <span class="win">Congratulations, you won!</span>
+        <span class="lose">You lost! Try again.</span>
+        <button class="try-again" onclick="window.location.reload()">Try again</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
