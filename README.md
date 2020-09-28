@@ -36,4 +36,6 @@
 
 18. [Coin Toss](https://hbence97.github.io/SmallJavascriptProjects/CoinTossGame/)
 
+19. [Speed Typing Game](https://hbence97.github.io/SmallJavascriptProjects/SpeedTypingGame/)
+
 (*I used several resources making these projects.*)
