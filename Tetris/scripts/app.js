@@ -14,7 +14,7 @@ document.addEventListener("keydown", e => {
 });
 
 const _ROW = 20;
-const _COL = 20;
+const _COL = 10;
 const square = 20;
 const vacant = "white";
 

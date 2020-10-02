@@ -9,7 +9,7 @@ const drawSquare = (x, y, color) => {
 const drawBoard = () => {
   for (let row = 0; row < _ROW; row++) {
     for (let col = 0; col < _COL; col++) {
-      drawSquare(row, col, vacant);
+      drawSquare(col, row, board[row][col]);
     }
   }
 };
