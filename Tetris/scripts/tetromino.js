@@ -49,7 +49,6 @@ class Tetromino {
     }
     return false;
   }
-
   rotate() {
     let rotateCollision = 0;
     if (this.collision(this.x, this.y, this.nextPattern)) {
@@ -58,7 +57,6 @@ class Tetromino {
       } else {
         rotateCollision = 1;
       }
-      console.log(rotateCollision);
     }
     if (!this.collision(rotateCollision, 0, this.nextPattern)) {
       this.delete();

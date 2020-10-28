@@ -1,5 +1,6 @@
 const canvas = document.getElementById("tetris");
 const ctx = canvas.getContext("2d");
+const scoreboard = document.getElementById("score");
 
 document.addEventListener("keydown", e => {
   if (e.keyCode == 37) {
@@ -17,6 +18,11 @@ const _ROW = 20;
 const _COL = 10;
 const square = 20;
 const vacant = "white";
+let board = [];
+let piece;
+let gameOver = false;
+let score = 0;
+let isRowFull;
 
 const _PIECES = [
   [Z, "#f00000"],
@@ -28,7 +34,6 @@ const _PIECES = [
   [J, "#0000f0"],
 ];
 
-let board = [];
 for (let row = 0; row < _ROW; row++) {
   board[row] = [];
   for (let col = 0; col < _COL; col++) {
@@ -36,16 +41,68 @@ for (let row = 0; row < _ROW; row++) {
   }
 }
 
-let piece = new Tetromino(_PIECES[0][0], _PIECES[0][1]);
+const randomTetromino = () => {
+  let randomNum = Math.floor(Math.random() * _PIECES.length);
+  return new Tetromino(_PIECES[randomNum][0], _PIECES[randomNum][1]);
+};
+
+piece = randomTetromino();
+
+const newPiece = () => {
+  piece = randomTetromino();
+};
+
+const lockTetromino = () => {
+  for (let i = 0; i < piece.activeTetromino.length; i++) {
+    for (let j = 0; j < piece.activeTetromino.length; j++) {
+      if (!piece.activeTetromino[i][j]) {
+        continue;
+      }
+      if (piece.y + i < 0) {
+        alert("Game Over");
+        gameOver = true;
+        break;
+      }
+      board[piece.y + i][piece.x + j] = piece.color;
+    }
+  }
+
+  for (let row = 0; row < _ROW; row++) {
+    isRowFull = true;
+    for (let col = 0; col < _COL; col++) {
+      isRowFull = isRowFull && board[row][col] != vacant;
+    }
+    if (isRowFull) {
+      for (let r = row; r > 1; r--) {
+        for (let col = 0; col < _COL; col++) {
+          board[r][col] = board[r - 1][col];
+        }
+      }
+      for (let j = 0; j < _COL; j++) {
+        board[0][j] = vacant;
+      }
+      score += 10;
+    }
+  }
+
+  drawBoard();
+  scoreboard.innerHTML = score;
+};
 
 let dropStart = Date.now();
 function drop() {
   let now = Date.now();
-  if (now - dropStart > 1000) {
+  if (now - dropStart > 900) {
     piece.moveDown();
+    if (piece.collision(0, 1, piece.activeTetromino)) {
+      lockTetromino();
+      newPiece();
+    }
     dropStart = Date.now();
   }
-  requestAnimationFrame(drop);
+  if (!gameOver) {
+    requestAnimationFrame(drop);
+  }
 }
 
 drawBoard();
