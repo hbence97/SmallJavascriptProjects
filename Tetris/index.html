@@ -2,12 +2,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
     <title>Tetris</title>
   </head>
   <body>
-    <canvas id="tetris" width="200" height="400"></canvas>
+    <div class="main">
+      <canvas id="tetris" width="200" height="400"></canvas>
+      <div class="scores">
+        Score: <div id="score">0</div>
+        High score: <div id="high-score">0</div>
+      </div>
+    </div>
     <div>
-      Score: <div id="score">0</div>
+      <div class="Play-again">Play again</div>
+      <button class="button">
+        <img class="image-icon" src="tetris_icon.png" alt="Play again button">
+      </button>
     </div>
     <script src="scripts/tetrominoes.js"></script>
     <script src="scripts/tetromino.js"></script>

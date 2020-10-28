@@ -1,6 +1,8 @@
 const canvas = document.getElementById("tetris");
 const ctx = canvas.getContext("2d");
 const scoreboard = document.getElementById("score");
+const highScoreboard = document.getElementById("high-score");
+const button = document.querySelector(".button");
 
 document.addEventListener("keydown", e => {
   if (e.keyCode == 37) {
@@ -22,6 +24,7 @@ let board = [];
 let piece;
 let gameOver = false;
 let score = 0;
+let highScore = localStorage.getItem("tetrisHighScore");
 let isRowFull;
 
 const _PIECES = [
@@ -40,6 +43,10 @@ for (let row = 0; row < _ROW; row++) {
     board[row][col] = vacant;
   }
 }
+
+button.addEventListener("click", e => {
+  window.location.reload();
+});
 
 const randomTetromino = () => {
   let randomNum = Math.floor(Math.random() * _PIECES.length);
@@ -73,7 +80,7 @@ const lockTetromino = () => {
       isRowFull = isRowFull && board[row][col] != vacant;
     }
     if (isRowFull) {
-      for (let r = row; r > 1; r--) {
+      for (let r = row; r > 0; r--) {
         for (let col = 0; col < _COL; col++) {
           board[r][col] = board[r - 1][col];
         }
@@ -103,6 +110,15 @@ function drop() {
   if (!gameOver) {
     requestAnimationFrame(drop);
   }
+
+  if (localStorage.getItem("tetrisHighScore") === null) {
+    localStorage.setItem("tetrisHighScore", 0);
+  }
+
+  if (score > highScore) {
+    localStorage.setItem("tetrisHighScore", score);
+  }
+  highScoreboard.innerHTML = highScore;
 }
 
 drawBoard();
