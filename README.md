@@ -38,4 +38,6 @@
 
 19. [Speed Typing Game](https://hbence97.github.io/SmallJavascriptProjects/SpeedTypingGame/)
 
+20. [Tetris](https://hbence97.github.io/SmallJavascriptProjects/Tetris/)
+
 (*I used several resources making these projects.*)
