@@ -12,8 +12,8 @@ class Bird {
         this.h = 26;
         this.radius = 12;
         this.frame = 0;
-        this.gravity = 0.25;
-        this.flapping = 4.6;
+        this.gravity = 0.05;
+        this.flapping = 2.4;
         this.speed = 0;
         this.rotation = 0;
     };

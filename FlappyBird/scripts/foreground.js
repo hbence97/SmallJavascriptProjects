@@ -6,7 +6,7 @@ class Foreground {
         this.h = 112;
         this.x = 0;
         this.y = canvas.height - 112;
-        this.dX = 2;
+        this.dX = 1.2;
     };
 
     draw() {

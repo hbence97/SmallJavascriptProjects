@@ -5,9 +5,9 @@ class Pipes {
         this.bottom = { sX : 502, sY : 0 };
         this.w = 53;
         this.h = 400;
-        this.gap = 85;
+        this.gap = 100;
         this.maxYPos = -150;
-        this.dX = 2;
+        this.dX = 1.2;
     };
 
     draw() {
@@ -48,7 +48,7 @@ class Pipes {
                     gameState.current = gameState.gameOver;
                 }
 
-            p.x -= this.dX;
+            p.x -= this.dX + 0.25;
             if (p.x + this.w <= 0) {
                 this.positions.shift();
                 sfxPoint.play();
