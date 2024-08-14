@@ -40,4 +40,6 @@
 
 20. [Tetris](https://hbence97.github.io/SmallJavascriptProjects/Tetris/)
 
+21. [Rotating Vim Cube](https://hbence97.github.io/SmallJavascriptProjects/RotatingVimCube/)
+
 (*I used several resources making these projects.*)
